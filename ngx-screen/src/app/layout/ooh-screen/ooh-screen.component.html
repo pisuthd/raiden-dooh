@@ -1,3 +1,53 @@
-<p>
-  ooh-screen works!
-</p>
+<div class="page-header">
+  <h1>Screens</h1>
+  <hr>
+</div>
+<div class="row">
+  <div *ngFor="let screen of screens" class="col-sm-4">
+    <div class="card bg-light mb-3">
+      <div class="card-header">{{screen.title}}
+        &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-sm btn-primary">The Bridge SG</button>
+      </div>
+      <div class="card-body">
+        <!--<h4 class="card-title">Light card title</h4>-->
+       <div class="text-center">
+        <img src="assets/images/screen.jpg" width="40%" /> 
+       </div>
+      
+        <div class="card-body table-responsive" style="font-size:14px">
+          <table class="table">
+              
+              <tbody>
+              <tr>
+                  <th scope="row">Rate</th>
+                  <td>{{ (screen.rate/1000000000000000000) }} EST / {{ screen.interval}} S</td>
+                 
+              </tr>
+              <!--
+              <tr>
+                  <th scope="row">Interval</th>
+                  <td> {{ screen.interval}} S </td>
+                
+              </tr>-->
+              <!--
+              <tr>
+                <th scope="row">Last Activity</th>
+                <td>10s ago</td>
+            </tr>-->
+              <tr>
+                  <th scope="row">Available</th>
+                  <td>Yes</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Highest Bid</th>
+                <td>1000000</td>
+            </tr>
+
+              </tbody>
+          </table>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

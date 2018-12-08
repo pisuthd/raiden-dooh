@@ -110,13 +110,14 @@ export class HeaderComponent implements OnInit , OnDestroy {
         this.updater.subscribe(
             tick =>{
                 this.loadInfo()
+
                 setTimeout(()=>{
                     this.updater.next(true)
                 },3000)
             }
         )
-
-        this.updater.next(true)
+        
+        //this.updater.next(true)
         this.pushRightClass = 'push-right';
     }
 
