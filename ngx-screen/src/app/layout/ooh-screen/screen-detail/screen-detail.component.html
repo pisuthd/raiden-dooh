@@ -1,0 +1,12 @@
+<div class="page-header" *ngIf="!ad">
+  <h1>Processing...</h1>
+
+</div>
+<div class="page-header" *ngIf="ad">
+  <h1> {{ ad.title }} </h1>
+      <hr>
+      <div class="text-center">
+        <img src="{{ad.image_url}}" width="50%"/>
+      </div>
+
+</div>

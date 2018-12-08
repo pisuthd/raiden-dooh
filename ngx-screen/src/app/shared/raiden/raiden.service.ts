@@ -34,6 +34,25 @@ export class RaidenService {
 
     }
 
+    payment(url,address,amount) {
+        let data = {
+            amount : amount
+        }
+
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        let options = new RequestOptions({ headers: headers });
+        // hardcode ethsg token
+        return this.http.post(url+"/api/1/payments/0x98a345f06e3A5DFe28EE0af38dd0780b4C0ed73B/"+address,data, options)
+            .map((res: Response) => res.json())
+            .catch(
+                (error: Response) => {
+                    return Observable.throw(error);
+                }
+            )
+
+    }
+
     listChannels(url : string) {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');

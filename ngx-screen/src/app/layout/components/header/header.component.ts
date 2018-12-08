@@ -116,8 +116,8 @@ export class HeaderComponent implements OnInit , OnDestroy {
                 },3000)
             }
         )
-        
-        //this.updater.next(true)
+
+        this.updater.next(true)
         this.pushRightClass = 'push-right';
     }
 

@@ -1,3 +1,21 @@
-<p>
-  ooh-ads works!
-</p>
+<div class="page-header">
+  <h1>Ads</h1>
+  <hr>
+</div>
+
+<div class="row">
+  <div *ngFor="let ad of ads" class="col-sm-4">
+    <div class="card bg-light mb-3">
+      <div class="card-header">{{ad.title}}
+
+      </div>
+      <div class="card-body">
+        <div class="text-center">
+          <img src="{{ad.image_url}}" width="90%" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

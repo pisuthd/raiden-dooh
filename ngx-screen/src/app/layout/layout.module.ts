@@ -11,6 +11,7 @@ import { OohHomeComponent } from './ooh-home/ooh-home.component';
 import { OohAdsComponent } from './ooh-ads/ooh-ads.component';
 import { OohScreenComponent } from './ooh-screen/ooh-screen.component';
 import { OohAboutComponent } from './ooh-about/ooh-about.component';
+import { ScreenDetailComponent } from './ooh-screen/screen-detail/screen-detail.component';
 
 
 @NgModule({
@@ -23,6 +24,6 @@ import { OohAboutComponent } from './ooh-about/ooh-about.component';
     declarations: [
         LayoutComponent, 
         SidebarComponent, 
-        HeaderComponent, OohHomeComponent, OohAdsComponent, OohScreenComponent, OohAboutComponent]
+        HeaderComponent, OohHomeComponent, OohAdsComponent, OohScreenComponent, OohAboutComponent, ScreenDetailComponent]
 })
 export class LayoutModule {}
