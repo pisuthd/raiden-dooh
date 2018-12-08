@@ -11,17 +11,20 @@ export class OohAdsComponent implements OnInit {
 
   myAddress
 
+  loading = false
+
   constructor(
     private ethService : EthService
   ) { }
 
   ngOnInit() {
+    this.loading = true
     this.myAddress = this.ethService.userInfo.address
     
     this.ethService.user.subscribe(
       tick =>{
-        this.ads = []
-        this.loadAds()
+        //this.ads = []
+        //this.loadAds()
       }
     )
 
@@ -43,6 +46,7 @@ export class OohAdsComponent implements OnInit {
               }
               if (this.ads.length == total) {
                 console.log('ads-->',this.ads)
+                this.loading = false
               }
             })
         }

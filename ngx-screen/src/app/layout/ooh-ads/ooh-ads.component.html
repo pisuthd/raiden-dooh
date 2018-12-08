@@ -4,6 +4,10 @@
 </div>
 
 <div class="row">
+  <div class="col-12" *ngIf="loading">
+    <i class="fa fa-refresh fa-spin fa-2x"></i>
+  </div>
+  
   <div *ngFor="let ad of ads" class="col-sm-4">
     <div class="card bg-light mb-3">
       <div class="card-header">{{ad.title}}

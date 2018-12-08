@@ -14,6 +14,8 @@ export class OohScreenComponent implements OnInit {
   pubs = []
   screens = []
 
+  loading = false
+
   myAddress
 
   constructor(
@@ -25,7 +27,7 @@ export class OohScreenComponent implements OnInit {
 
   
   ngOnInit() {
-
+    this.loading = true
     this.myAddress = this.ethService.userInfo.address
 
     this.loadPubs()
@@ -103,6 +105,7 @@ export class OohScreenComponent implements OnInit {
               this.screens.push(item)
               if (this.screens.length == total) {
                 console.log('screens-->', this.screens)
+                this.loading = false
                 this.loadTask()
               }
 
