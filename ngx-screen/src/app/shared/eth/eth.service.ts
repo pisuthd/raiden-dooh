@@ -20,11 +20,24 @@ export class EthService {
 
     currentUser : any
 
+    user = new Subject();
+    userInfo : any
+
     constructor() {
 
         // set default user
         this.currentUser = environment.configuration[0]
+    
+        this.user.subscribe(
+            user=>{
+                this.userInfo = user
+            }
+        )
     }
+
+
+
+
 
 
     convertEth(wei) {

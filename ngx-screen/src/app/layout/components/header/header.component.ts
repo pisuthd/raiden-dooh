@@ -55,6 +55,8 @@ export class HeaderComponent implements OnInit , OnDestroy {
         this.select.channels = []
         
 
+
+
         this.loadInfo()
     }
 
@@ -71,7 +73,7 @@ export class HeaderComponent implements OnInit , OnDestroy {
 
     loadInfo() {
         console.log('load info for ',this.select)
-        
+        this.ethService.user.next(this.select)
         //this.select.balance = 0
         this.raidenService.listChannels(this.select.raiden_host).subscribe(
             channels=>{

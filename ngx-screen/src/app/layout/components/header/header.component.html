@@ -5,10 +5,15 @@
     <i class="fa fa-bars text-muted" aria-hidden="true"></i>
   </button>
   <div class="collapse navbar-collapse">
-    <a (click)="loadInfo()" class="nav-link btn mt-1" role="button"
-      style="padding: .375rem 1rem !important;border-color: #999;color: #999">
-      <i class="fa fa-diamond"></i>&nbsp;{{ select.balance | number:'1.1-6' }}&nbsp;EST
-  </a>
+    <a (click)="loadInfo()" class="nav-link btn mt-1" role="button" style="padding: .375rem 1rem !important;border-color: #999;color: #999">
+      <!--<i class="fa fa-diamond"></i>&nbsp;-->{{ select.balance | number:'1.1-6' }}&nbsp;EST
+    </a>
+    &nbsp;
+    <a href="{{select.raiden_host}}" target="_blank" class="nav-link btn mt-1" role="button" style="padding: .375rem 1rem !important;border-color: #999;color: #999">
+      Raiden Console
+    </a>
+
+
     <ul class="navbar-nav ml-auto">
       <li class="nav-item d-none d-xl-block">
         <a href="https://github.com/start-angular/SB-Admin-BS4-Angular-7/archive/master.zip" class="nav-link btn mt-1"
@@ -78,7 +83,8 @@
   </li>
   <li class="nav-item dropdown" ngbDropdown>
     <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
-      <i class="fa fa-database"></i>&nbsp;channels&nbsp;<span class="badge badge-info">{{ select.channels.length }}</span> <b class="caret"></b>
+      <i class="fa fa-database"></i>&nbsp;channels&nbsp;<span class="badge badge-info">{{ select.channels.length }}</span>
+      <b class="caret"></b>
     </a>
     <div class="dropdown-menu-right" ngbDropdownMenu>
       <a class="dropdown-item" *ngFor="let channel of select.channels" href="javascript:void(0)" (click)="changeLang('en')">
