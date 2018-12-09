@@ -8,74 +8,13 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./access-denied/access-denied.module": [
-		"./src/app/access-denied/access-denied.module.ts",
-		"access-denied-access-denied-module"
-	],
-	"./blank-page/blank-page.module": [
-		"./src/app/layout/blank-page/blank-page.module.ts",
-		"blank-page-blank-page-module"
-	],
-	"./bs-component/bs-component.module": [
-		"./src/app/layout/bs-component/bs-component.module.ts",
-		"default~bs-component-bs-component-module~dashboard-dashboard-module~layout-layout-module",
-		"common",
-		"bs-component-bs-component-module"
-	],
-	"./bs-element/bs-element.module": [
-		"./src/app/layout/bs-element/bs-element.module.ts",
-		"common",
-		"bs-element-bs-element-module"
-	],
-	"./charts/charts.module": [
-		"./src/app/layout/charts/charts.module.ts",
-		"common",
-		"charts-charts-module"
-	],
-	"./dashboard/dashboard.module": [
-		"./src/app/layout/dashboard/dashboard.module.ts",
-		"default~bs-component-bs-component-module~dashboard-dashboard-module~layout-layout-module",
-		"common",
-		"dashboard-dashboard-module"
-	],
-	"./form/form.module": [
-		"./src/app/layout/form/form.module.ts",
-		"common",
-		"form-form-module"
-	],
-	"./grid/grid.module": [
-		"./src/app/layout/grid/grid.module.ts",
-		"common",
-		"grid-grid-module"
-	],
 	"./layout/layout.module": [
 		"./src/app/layout/layout.module.ts",
-		"default~bs-component-bs-component-module~dashboard-dashboard-module~layout-layout-module",
-		"common",
 		"layout-layout-module"
-	],
-	"./login/login.module": [
-		"./src/app/login/login.module.ts",
-		"common",
-		"login-login-module"
 	],
 	"./not-found/not-found.module": [
 		"./src/app/not-found/not-found.module.ts",
 		"not-found-not-found-module"
-	],
-	"./server-error/server-error.module": [
-		"./src/app/server-error/server-error.module.ts",
-		"server-error-server-error-module"
-	],
-	"./signup/signup.module": [
-		"./src/app/signup/signup.module.ts",
-		"common",
-		"signup-signup-module"
-	],
-	"./tables/tables.module": [
-		"./src/app/layout/tables/tables.module.ts",
-		"common",
-		"tables-tables-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -87,7 +26,7 @@ function webpackAsyncContext(req) {
 			throw e;
 		});
 	}
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
+	return __webpack_require__.e(ids[1]).then(function() {
 		var id = ids[0];
 		return __webpack_require__(id);
 	});
@@ -124,10 +63,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var routes = [
     { path: '', loadChildren: './layout/layout.module#LayoutModule', canActivate: [_shared__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]] },
-    { path: 'login', loadChildren: './login/login.module#LoginModule' },
-    { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
-    { path: 'error', loadChildren: './server-error/server-error.module#ServerErrorModule' },
-    { path: 'access-denied', loadChildren: './access-denied/access-denied.module#AccessDeniedModule' },
     { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
     { path: '**', redirectTo: 'not-found' }
 ];
