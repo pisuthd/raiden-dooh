@@ -4,6 +4,8 @@ Raidenooh is a decentralized digital signage platform that going to tackle a pro
 
 * Powered by Ethereum + Raiden
 
+![System Overview](https://s3-ap-southeast-1.amazonaws.com/ferrock-scg/diagram.png)
+
 ## Installation
 
 The application will need Raiden for micro-payment functionality, please ensure Raiden node is up and running and a channel is still open between parties.
