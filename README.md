@@ -3,6 +3,7 @@
 Raidenooh is a decentralized digital signage platform that going to tackle a problem in tradition advertisement industry which is a long and complex process. The new blockchain based system will be a breakthough to the industry, advertiser can post an ad directly to the publisher reduce a time-to-publish from 30 days to 3 minutes where the payment is instant and don't require any intermediary.
 
 * Powered by Ethereum + Raiden
+* [Details on Devpost](https://devpost.com/software/raidenooh )
 
 ![System Overview](https://s3-ap-southeast-1.amazonaws.com/ferrock-scg/diagram.png)
 
